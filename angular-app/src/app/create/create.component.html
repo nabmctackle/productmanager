@@ -1,0 +1,28 @@
+<h3>Create a product!</h3>
+{{product|json}}
+<form (submit)="createProduct()">
+  <div  class="form-group">
+    <label for="productname">Product Name</label>
+    <input type="text" class="form-control" id="productname" name="product.name" [(ngModel)]="product.name"/>
+  </div>
+  <div  class="form-group">
+    <label for="productprice">Product Price</label>
+    <input type="text" class="form-control" id="productprice" name="product.price" [(ngModel)]="product.price"/>
+  </div>
+  <div  class="form-group">
+    <label for="productimage">Product Image Link</label>
+    <input type="text" class="form-control" id="productimage" name="product.image" [(ngModel)]="product.image"/>
+  </div>
+  <div class="form-group">
+    <input type="submit" class="form-control btn btn-primary" value="Create new Product">
+  </div>
+</form>
+
+<!-- 
+
+<form (submit)="updateOneTask()">
+    <input type="text" name="task.title" [(ngModel)]="task.title" />
+    <input type="text" name="task.description" [(ngModel)]="task.description" />
+    <input type="text" name="task.completed" [(ngModel)]="task.completed" />
+    <input type="submit" value="edit Task" />
+  </form> -->

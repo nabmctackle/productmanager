@@ -1,0 +1,13 @@
+
+<div class="container" id="listcontainer" *ngIf="productlist">
+  <!-- {{productlist['allproducts']|json}} -->
+  <div *ngFor="let item of productlist['allproducts']" class="productid container col-4">
+    <h3>{{item.name}}</h3>
+    <img src="{{item.image}}">
+    <h3>{{item.price}}</h3>
+    <button [routerLink]="['/edit',item._id]" class="btn btn-primary sm-col-4 nav1">Edit</button>
+    <form (submit)="deleteProduct(item._id)">
+      <input type="submit" value="Delete" class= "btn btn-danger">
+    </form>
+  </div>
+</div>
